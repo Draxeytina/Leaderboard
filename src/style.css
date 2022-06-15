@@ -68,3 +68,8 @@ button {
   grid-row: 2;
   gap: 1rem;
 }
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
