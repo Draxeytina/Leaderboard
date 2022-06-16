@@ -4,10 +4,23 @@
   padding: 0;
 }
 
+body {
+  background-image: url('https://i.ytimg.com/vi/ZSIyXh0esnc/maxresdefault.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 145%;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
 h1 {
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
   font-size: 80px;
-  margin-left: 5%;
 }
 
 h2 {
@@ -24,6 +37,16 @@ button {
 button {
   font-size: 16px;
   width: 40%;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+}
+
+ul {
+  background-color: white;
 }
 
 .wrap {
@@ -69,7 +92,16 @@ button {
   gap: 1rem;
 }
 
-.submit {
+.submit-button {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 699px) {
+  body {
+    background-image: url('https://i.ytimg.com/vi/ZSIyXh0esnc/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 350%;
+  }
 }
