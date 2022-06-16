@@ -1,18 +1,14 @@
-const scores = [
-  {
-    name: 'Malven',
-    score: '20',
-  },
-  {
-    name: 'Bethany',
-    score: '1040',
-  },
-];
+import fetchData from './fetchData.js';
 
 const renderList = () => {
-  scores.forEach((score) => {
-    const List = `<li class="list-item">${score.name}: ${score.score}</label></li>`;
-    document.querySelector('.list-container').innerHTML += List;
+  const playerList = document.querySelector('.list-container');
+  playerList.innerHTML = '';
+  fetchData().then((result) => {
+    const sortScores = result.result.sort((a, b) => b.score - a.score);
+    sortScores.forEach((score) => {
+      const List = `<li class="list-item">${score.user}: ${score.score}</label></li>`;
+      playerList.innerHTML += List;
+    });
   });
 };
 
